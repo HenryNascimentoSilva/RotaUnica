@@ -1,2 +1,10 @@
-<h1>Excursions#index</h1>
-<p>Find me in app/views/excursions/index.html.erb</p>
+<h1>Excursões</h1>
+<%= link_to "Nova Excursão", new_excursion_path %>
+
+<% if @excursions.any? %>
+  <ul>
+    <% @excursions.each do |excursion| %>
+        <%= link_to excursion.name, excursion%>
+    <% end %>
+  </ul>
+<% end %>

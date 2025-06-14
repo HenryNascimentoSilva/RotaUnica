@@ -1,0 +1,9 @@
+<h1> <%= @excursion.name %> </h1>
+
+<%= link_to "Voltar", excursions_path %>
+<%= link_to "Editar", edit_excursion_path(@excursion) %>
+<%= button_to "Deletar", @excursion, method: :delete, data: { turbo_confirm: "Você tem certeza?" } %>
+<p>
+  <strong>Nome:</strong>
+  <%= @excursion.name %>
+</p>
