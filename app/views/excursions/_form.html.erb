@@ -1,5 +1,7 @@
 <%= form_with model: excursion do |form| %>
     <div>
+        <%= form.label :featured_image, "Imagem em Destaque", style: "display: block" %>
+        <%= form.file_field :featured_image, accept: "image/*" %>
         <%= form.label :name, "Nome: "%>
         <%= form.text_field :name %>
         <%= form.label :description, style: "display: block" %>

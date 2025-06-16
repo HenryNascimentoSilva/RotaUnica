@@ -46,7 +46,7 @@ class ExcursionsController < ApplicationController
     # Require exige que o parametro :excursion estejam agrupados sobre a chave :excursion
     # Permit permite que apenas os parametros :name
     def excursion_params
-      params.require(:excursion).permit(:name, :description)
+      params.require(:excursion).permit(:name, :description, :featured_image)
     end
     def set_excursion
       @excursion = Excursion.find(params[:id])

@@ -1,4 +1,4 @@
-
+<%= image_tag @excursion.featured_image if @excursion.featured_image.attached? %>
 <% cache @excursion do %>
   <h1> <%= @excursion.name %> </h1>
   <%= @excursion.description %>
