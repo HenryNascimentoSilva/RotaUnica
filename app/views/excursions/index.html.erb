@@ -1,5 +1,5 @@
 <h1>Excursões</h1>
-<%= link_to "Nova Excursão", new_excursion_path %>
+<%= link_to "Nova Excursão", new_excursion_path if authenticated? %>
 
 <% if @excursions.any? %>
   <ul>

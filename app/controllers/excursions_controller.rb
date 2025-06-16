@@ -1,5 +1,6 @@
 class ExcursionsController < ApplicationController
   before_action :set_excursion, only: %i[show edit update destroy search]
+  allow_unauthenticated_access only: %i[index show search]
   def index
     @excursions = Excursion.all
   end
