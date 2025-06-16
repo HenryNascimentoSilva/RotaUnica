@@ -1,6 +1,7 @@
 
 <% cache @excursion do %>
   <h1> <%= @excursion.name %> </h1>
+  <%= @excursion.description %>
 <% end %>
 <%= link_to "Voltar", excursions_path %>
 <% if authenticated? %>
